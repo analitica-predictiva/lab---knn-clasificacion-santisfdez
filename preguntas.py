@@ -56,10 +56,10 @@ def pregunta_02():
     X = df.drop("party",axis=1).values
 
     # Importe el transformador OrdinalEncoder
-    from sklearn.preprocessing import OneHotEncoder
+    from sklearn.preprocessing import OrdinalEncoder
 
     # Transforme las variables de entrada usando fit_transform
-    X = OneHotEncoder().fit_transform(X)
+    X = OrdinalEncoder().fit_transform(X)
 
     # Importe KNeighborsClassifier de sklearn.neighbors
     from sklearn.neighbors import KNeighborsClassifier
